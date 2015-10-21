@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sql_create_tables">
+        CREATE TABLE sale (
+        	_id integer primary key autoincrement,
+        	content text,
+        	active integer DEFAULT 1
+        );
+        CREATE TABLE location (
+        	_id integer primary key autoincrement,
+        	content text,
+        	code text,
+        	parent integer,
+        	active integer DEFAULT 1
+        );
+        CREATE TABLE store (
+        	_id integer primary key autoincrement,
+        	content text,
+        	active integer DEFAULT 1
+        );
+        CREATE TABLE currency (
+        	_id integer primary key autoincrement,
+        	content text,
+			active integer DEFAULT 1
+        );
+        CREATE TABLE currency_location(
+        	_id integer primary key autoincrement,
+        	currency integer,
+        	location integer,
+        	active integer DEFAULT 1
+        );
+        CREATE TABLE category (
+        	_id integer primary key autoincrement,
+        	content text,
+        	parent integer DEFAULT null,
+        	active integer DEFAULT 1
+        );
+        CREATE TABLE tag (
+        	_id integer primary key autoincrement,
+        	content text,
+        	active integer DEFAULT 1
+        )
+    </string>
+    
+    <!-- <string name="sql_insert_tmp_data">"
+        INSERT INTO location(_id, content, code) VALUES(1, '
+        	{
+        		\"nameLocal\" : \"Belarus\",
+        		\"nameCode\" : \"BY\",
+        		\"type\" : 0
+        	}
+        ', 'BY');
+        INSERT INTO location(_id, content, code) VALUES(2, '
+        	{
+        		\"nameLocal\" : \"Гомель\",
+        		\"nameCode\" : \"Gomel\",
+        		\"type\" : 2,
+        		\"parent\" : {
+        			\"id\" : 1
+        		}
+        	}
+        ', 'Gomel');
+        INSERT INTO location(_id, content, code) VALUES(3, '
+        	{
+        		\"nameLocal\" : \"Минск\",
+        		\"nameCode\" : \"Minsk\",
+        		\"type\" : 2,
+        		\"parent\" : {
+        			\"id\" : 1
+        		}
+        	}
+        ', 'Minsk');
+        
+        INSERT INTO store(_id, content) VALUES(1, '
+        	{
+        		\"nameLocal\" : \"Secret\",
+        		\"city\" : {
+        			id : 2
+        		},
+        		address: \"Gagarina str. 49\"
+        	}
+        ');
+        INSERT INTO store(_id, content) VALUES(2, '
+        	{
+        		\"nameLocal\" : \"Zerkalo\",
+        		\"city\" : {
+        			id : 3
+        		},
+        		address: \"Khoruzhei str. 12\"
+        	}
+        ');
+        INSERT INTO store(_id, content) VALUES(3, '
+        	{
+        		\"nameLocal\" : \"Stolica\",
+        		\"city\" : {
+        			id : 3
+        		},
+        		address: \"Nezavisimosti av. 22\"
+        	}
+        ');
+        
+        INSERT INTO currency(_id, content) VALUES(1,'
+        	{
+        		\"code\" : \"USD\",
+        		\"symbol\" : \"$\"
+        	}
+        ');
+        INSERT INTO currency(_id, content) VALUES(2,'
+        	{
+        		\"code\" : \"EUR\",
+        		\"symbol\" : \"€\"
+        	}
+        ');
+        INSERT INTO currency(_id, content) VALUES(3,'
+        	{
+        		\"code\" : \"BYR\",
+        		\"symbol\" : \"R\"
+        	}
+        ');
+        
+        INSERT INTO currency_location(location, currency) VALUES(1, 3);
+        
+        INSERT INTO category(_id, content, parent) VALUES(1, '
+        	{
+        		\"key\" : \"Cellphone\",
+        		\"nameLocal\" : \"Cellphone\"
+        	}
+        ', null);
+
+        INSERT INTO category(_id, content, parent) VALUES(2, '
+        	{
+        		\"key\" : \"Smartphone\",
+        		\"nameLocal\" : \"Smartphone\",
+        		\"parent\" : {
+        			\"id\" : 1
+        		}
+        	}
+        ', 1);
+        INSERT INTO category(_id, content, parent) VALUES(3, '
+        	{
+        		\"key\" : \"Android\",
+        		\"nameLocal\" : \"Android\",
+        		\"parent\" : {
+        			\"id\" : 2
+        		}
+        	}
+        ', 2);
+        INSERT INTO category(_id, content, parent) VALUES(4, '
+        	{
+        		\"key\" : \"Accessories\",
+        		\"nameLocal\" : \"Accessories\",
+        		\"parent\" : {
+        			\"id\" : 2
+        		}
+        	}
+        ', 2);
+
+		INSERT INTO tag(_id, content) VALUES(1, '
+			{
+				\"title\" : \"Phone cover\",
+				\"textColor\" : \"#ffffff\",
+				\"backgroundColor\" : \"#9933cc\"
+			}
+		');
+		INSERT INTO tag(_id, content) VALUES(2, '
+			{
+				\"title\" : \"Smartphone\",
+				\"textColor\" : \"#000000\",
+				\"backgroundColor\" : \"#99cc00\"
+			}
+		');
+		INSERT INTO tag(_id, content) VALUES(3, '
+			{
+				\"title\" : \"Nexus\",
+				\"textColor\" : \"#000000\",
+				\"backgroundColor\" : \"#33b5e5\"
+			}
+		');
+		INSERT INTO tag(_id, content) VALUES(4, '
+			{
+				\"title\" : \"Black style\",
+				\"textColor\" : \"#ffffff\",
+				\"backgroundColor\" : \"#000000\"
+			}
+		');
+		INSERT INTO tag(_id, content) VALUES(5, '
+			{
+				\"title\" : \"Accessories\",
+				\"textColor\" : \"#000000\",
+				\"backgroundColor\" : \"#ffbb33\"
+			}
+		');
+        
+        INSERT INTO sale(content) VALUES('
+        	{
+        		\"name\" : \"Nexus 5 Black\",
+        		\"description\" : \"Brand new Nexus 5, black, fabriqued in Vietnam. With hands-free and Extra battery!\",
+        		\"endDate\" : 1401192788127,
+        		\"priceOrigin\" : 450,
+        		\"priceCurrent\" : 325.5,
+        		\"currency\" : {
+        			\"id\" : 1
+        		},
+        		\"amount\" : 5,
+        		\"city\" : {
+        			\"id\" : 2
+        		},
+        		\"address\" : \"Sovetskaya 62a `Sviaznoy`\",
+        		\"tags\" : \"{3}|{2}|{4}\",
+        		\"category\" :  {
+        			\"id\" : 3
+        		}
+        	}
+        ');
+        INSERT INTO sale(content) VALUES('
+        	{
+        		\"name\" : \"Galaxy Nexus Cover Black Leather\",
+        		\"description\" : \"Cover for Galaxy Nexus, black leather nice quality. Looks solid and stylish.\",
+        		\"endDate\" : 1401192788127,
+        		\"priceOrigin\" : 280,
+        		\"perCent\" : 50,
+        		\"currency\" : {
+        			\"id\" : 3
+        		},
+        		\"amount\" : 4,
+        		\"store\" : {
+        			\"id\" : 2
+        		},
+        		\"tags\" : \"{1}|{3}|{2}|{4}|{5}|Solid style\",
+        		\"category\" :  {
+        			\"id\" : 4
+        		}
+        	}
+        ')
+    "</string>
+ -->
+</resources>

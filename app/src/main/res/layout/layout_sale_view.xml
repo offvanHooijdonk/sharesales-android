@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:f="http://schemas.android.com/apk/res/com.share.sales"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        
+        <LinearLayout
+            android:id="@+id/blockCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:visibility="gone"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:ellipsize="middle"
+                android:lines="1"
+                android:text="Cat1 > Cat2"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/blockCategory"
+            android:layout_marginBottom="6dp"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:text="@string/fish_title"
+            android:textSize="22sp" />
+
+        <RelativeLayout
+            android:id="@+id/blockPrices"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textName" >
+
+            <TextView
+                android:id="@+id/textDiscount"
+                style="@style/perCent50"
+                android:layout_width="56dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:text="50"
+                android:textSize="48sp" />
+
+            <TextView
+                android:id="@+id/textSymbolPerCent"
+                style="@style/perCent50"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/textDiscount"
+                android:layout_marginTop="4dp"
+                android:layout_toRightOf="@id/textDiscount"
+                android:text="@string/percent"
+                android:textSize="26sp" />
+
+            <TextView
+                android:id="@+id/textPriceNew"
+                style="@style/perCent50"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/textDiscount"
+                android:layout_marginTop="4dp"
+                android:layout_toLeftOf="@+id/textCurrency"
+                android:text="2,600"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/textPriceOld"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textDiscount"
+                android:layout_alignRight="@id/textPriceNew"
+                android:text="5,200"
+                android:textColor="#999999"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@id/textCurrency"
+                style="@style/perCent50"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/textPriceNew"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="8dp"
+                android:text="BYR"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <org.apmem.tools.layouts.FlowLayout
+            android:id="@+id/blockImages"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/blockPrices"
+            f:horizontalSpacing="6dp"
+            f:orientation="horizontal"
+            f:verticalSpacing="6dp" >
+        </org.apmem.tools.layouts.FlowLayout>
+
+        <RelativeLayout
+            android:id="@+id/blockLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/blockImages"
+            android:layout_marginTop="6dp" >
+
+            <TextView
+                android:id="@+id/textAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignRight="@+id/btnLocation"
+                android:layout_alignTop="@+id/btnLocation"
+                android:layout_marginRight="42dp"
+                android:layout_marginTop="8dp"
+                android:text="Gomel, Gagarina 46"
+                android:textSize="18sp" />
+
+            <ImageButton
+                android:id="@id/btnLocation"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="?android:selectableItemBackground"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_action_place" />
+
+            <TextView
+                android:id="@+id/textStore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/textAddress"
+                android:layout_marginTop="8dp"
+                android:text="&apos;Secret&apos; ground 1 &apos;Sketchers&apos; place 32"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/blockDates"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/blockLocation"
+            android:layout_marginTop="12dp" >
+
+            <TextView
+                android:id="@+id/textFrom"
+                android:layout_width="48dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:text="from"
+                android:textSize="@dimen/view_date_highlighted" />
+
+            <TextView
+                android:id="@+id/textDateFrom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="12dp"
+                android:layout_toRightOf="@id/textFrom"
+                android:text="10/20/2014"
+                android:textSize="@dimen/view_date_highlighted" />
+
+            <TextView
+                android:id="@+id/textUpcomming"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_toRightOf="@+id/textDateFrom"
+                android:text="Upcomming"
+                android:textColor="#339933"
+                android:textSize="@dimen/view_date_highlighted" />
+
+            <TextView
+                android:id="@+id/textTill"
+                android:layout_width="48dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textFrom"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="6dp"
+                android:text="till"
+                android:textSize="@dimen/view_date_normal" />
+
+            <TextView
+                android:id="@+id/textDateTo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/textTill"
+                android:layout_toRightOf="@id/textTill"
+                android:text="1/15/2015"
+                android:textSize="@dimen/view_date_normal" />
+
+            <TextView
+                android:id="@+id/textExpiring"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/textTill"
+                android:layout_marginLeft="16dp"
+                android:layout_toRightOf="@+id/textDateTo"
+                android:text="Expiring"
+                android:textColor="#CC0000"
+                android:textSize="@dimen/view_date_highlighted"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <org.apmem.tools.layouts.FlowLayout
+            android:id="@+id/blockTags"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/blockDates"
+            android:layout_marginTop="12dp"
+            f:horizontalSpacing="6dp"
+            f:orientation="horizontal"
+            f:verticalSpacing="6dp" >
+        </org.apmem.tools.layouts.FlowLayout>
+    </RelativeLayout>
+
+</ScrollView>

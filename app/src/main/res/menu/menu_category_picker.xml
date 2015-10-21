@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item 
+        android:id="@+id/itemSelect"
+        android:icon="@drawable/ic_action_accept"
+        android:title="Select"
+        android:showAsAction="always"/>
+    
+    <item 
+        android:id="@+id/itemBack"
+        android:enabled="false"
+        android:icon="@drawable/ic_action_previous_item"
+        android:title="Back"
+        android:showAsAction="always"/>
+</menu>

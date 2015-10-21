@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" xmlns:f="http://schemas.android.com/apk/res/com.share.sales">
+    
+    <TextView 
+        android:id="@+id/tvSaleTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/ivPhoto"
+        android:layout_alignRight="@+id/ivPhoto"
+        android:layout_marginRight="86dp"
+        android:layout_marginTop="8dp"
+        android:textSize="18sp"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:text="Nice Cover Nexus 5 black awsome look photo this is greate yammy!!! You want it!" />
+    
+	<ImageView 
+	    android:id="@+id/ivPhoto"
+	    android:layout_width="80dp"
+	    android:layout_height="45dp"
+	    android:layout_alignParentRight="true"
+	    android:layout_marginTop="6dp"
+	    android:layout_marginRight="8dp"
+	    android:scaleType="fitCenter"
+	    android:src="@drawable/sample_photo"/>
+	
+	<TextView 
+	    android:id="@+id/tvDiscountAmount"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/ivPhoto"
+	    android:layout_marginTop="-4dp"
+	    android:textColor="#ff4444"
+	    android:textSize="48sp"
+	    android:text="50"/>
+	
+	<TextView 
+	    android:id="@+id/tvPerCent"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignTop="@id/tvDiscountAmount"
+	    android:layout_marginTop="4dp"
+	    android:layout_toRightOf="@id/tvDiscountAmount"
+	    android:textColor="#ff4444"
+	    android:textSize="26sp"
+	    android:text="@string/percent" />
+	
+	<TextView 
+	    android:id="@+id/tvNewPrice"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="8dp"
+	    android:layout_alignTop="@id/tvDiscountAmount"
+	    android:layout_marginLeft="32dp"
+	    android:layout_alignLeft="@id/tvPerCent"
+	    android:textSize="16sp"
+	    android:textColor="#ff4444"
+	    android:text="1 200 000"/>
+	
+	<TextView 
+	    android:id="@+id/tvOldPrice"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="2dp"
+	    android:layout_below="@id/tvNewPrice"
+	    android:layout_alignLeft="@id/tvNewPrice"
+	    android:textSize="16sp"
+	    android:textColor="#999999"
+	    android:text="1 200 000"/>
+	
+	<TextView 
+	    android:id="@+id/tvLocation"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignBaseline="@id/tvNewPrice"
+	    android:layout_toRightOf="@id/tvNewPrice"
+	    android:layout_marginLeft="12dp"
+	    android:maxLines="2"
+	    android:ellipsize="end"
+	    android:textSize="12sp"
+	    android:text="City: Gomel магазин Связной на Карповича"/>
+<!-- 	
+	<TextView 
+	    android:id="@+id/tvDescription"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_toRightOf="@id/ivPhoto"
+	    android:layout_below="@id/tvOldPrice"
+	    android:layout_marginTop="6dp"
+	    android:maxLines="3"
+	    android:ellipsize="end"
+	    android:textSize="14sp"
+	    android:text="@string/fish"/>
+	-->
+	
+	
+	<!-- <com.share.sales.ui.layout.FlowLayout 
+	    android:id="@+id/llTags"
+	    android:layout_height="wrap_content"
+	    android:layout_width="match_parent"
+	    app:paddingV="6"
+	    app:paddingH="12"
+	    android:orientation="horizontal"
+	    android:layout_marginTop="6dp"
+	    android:layout_below="@id/tvDiscountAmount">
+	    
+	    <TextView 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_margin="4dp"
+	        android:text="Phone cover"/>
+	    
+	    <TextView 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_margin="4dp"
+	        android:text="Smartphone"/>
+	    
+	    <TextView 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_margin="4dp"
+	        android:text="Nexus"/>
+	    
+	    <TextView 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_margin="4dp"
+	        android:text="Black style"/>
+	    
+	    <TextView 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_margin="4dp"
+	        android:text="Accessories"/>
+	    
+	</com.share.sales.ui.layout.FlowLayout> -->
+	
+	
+	<org.apmem.tools.layouts.FlowLayout
+	    android:id="@+id/llTags"
+	    android:layout_height="wrap_content"
+	    android:layout_width="match_parent"
+	    f:orientation="horizontal"
+        f:horizontalSpacing="12dip"
+        f:verticalSpacing="6dip"
+        f:debugDraw="true"
+	    android:layout_marginTop="6dp"
+	    android:layout_below="@id/tvDiscountAmount" >
+	    
+	    <TextView 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_margin="4dp"
+	        android:text="Phone cover"/>
+	    
+	    <TextView 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_margin="4dp"
+	        android:text="Smartphone"/>
+	    
+	    <TextView 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_margin="4dp"
+	        android:text="Nexus"/>
+	    
+	    <TextView 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_margin="4dp"
+	        android:text="Black style"/>
+	    
+	    <TextView 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_margin="4dp"
+	        android:text="Accessories"/>
+	</org.apmem.tools.layouts.FlowLayout>
+	
+</RelativeLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="12dp"
+    android:paddingStart="12dp"
+    android:paddingBottom="8dp"
+    android:paddingTop="8dp" 
+    android:paddingRight="6dp"
+    android:paddingEnd="6dp"
+    android:background="?android:attr/activatedBackgroundIndicator" >
+   
+    <TextView 
+        android:id="@+id/textCategoryName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="36dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="4dp"
+        android:layout_alignEnd="@+id/categoryNext"
+        android:layout_alignRight="@id/categoryNext"
+        android:textSize="20sp"
+        android:lines="1"
+        android:ellipsize="end"
+        android:layout_alignBottom="@id/categoryNext"
+        android:text="CategoryName"/>
+    
+    <ImageView 
+        android:id="@id/categoryNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_action_next_item"/>"
+
+</RelativeLayout>

@@ -1,0 +1,106 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity$DummySectionFragment" >
+
+    <RelativeLayout
+        android:id="@+id/blockFilterForm"
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:visibility="gone" >
+
+        <!--
+        <EditText
+            android:id="@+id/inputSearchName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:hint="Item Name"
+            android:lines="1"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/inputSearchDiscount"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/inputSearchName"
+            android:hint="%"
+            android:inputType="number"
+            android:lines="1"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/inputSearchCurrentPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/inputSearchDiscount"
+            android:layout_toLeftOf="@+id/ddSearchCurrency"
+            android:layout_toRightOf="@id/inputSearchDiscount"
+            android:hint="Current Price"
+            android:inputType="number"
+            android:lines="1"
+            android:textSize="16sp" />
+
+        <Spinner
+            android:id="@id/ddSearchCurrency"
+            android:layout_width="76dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/inputSearchDiscount"
+            android:layout_alignParentRight="true"
+            android:entries="@array/currs" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/inputSearchDiscount"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="12dp"
+            android:background="@android:color/darker_gray" />
+        -->
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/blockLoader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ProgressBar
+            android:id="@+id/pbLoader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lvSales"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/blockFilterForm" >
+    </ListView>
+
+    <LinearLayout
+        android:id="@+id/blockEmptyList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        android:visibility="gone" >
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="No sales found"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+</RelativeLayout>

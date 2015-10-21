@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:f="http://schemas.android.com/apk/res/com.share.sales"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:selectableItemBackground" >
+
+    <TextView
+        android:id="@+id/tvSaleTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@+id/tvPerCent"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="#666666"
+        android:textStyle="bold"
+        android:text="Nice Cover Nexus 5 black awsome look photo this is greate yammy!!! You want it!"
+        android:textSize="18sp" />
+    <!--
+	<ImageView 
+	    android:id="@+id/ivPhoto"
+	    android:layout_width="88dp"
+	    android:layout_height="66dp"
+		android:layout_toRightOf="@+id/tvPerCent"
+	    android:layout_marginLeft="8dp"
+	    android:layout_below="@id/tvSaleTitle"
+	    android:layout_marginTop="6dp"
+	    android:scaleType="fitCenter"
+	    android:src="@drawable/sample_photo"/>
+    -->
+
+    <TextView
+        android:id="@+id/tvDiscountAmount"
+        android:layout_width="56dp"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:layout_marginTop="0dp"
+        android:text="50"
+        android:textColor="#ff4444"
+        android:textSize="48sp" />
+
+    <TextView
+        android:id="@+id/tvPerCent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:layout_alignTop="@id/tvDiscountAmount"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@id/tvDiscountAmount"
+        android:text="@string/percent"
+        android:textColor="#ff4444"
+        android:textSize="26sp" />
+
+    <TextView
+        android:id="@+id/tvNewPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:layout_alignRight="@id/tvPerCent"
+        android:layout_below="@id/tvDiscountAmount"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="0dp"
+        android:text="600 000"
+        android:textColor="#ff4444"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tvOldPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:layout_alignRight="@id/tvPerCent"
+        android:layout_below="@id/tvNewPrice"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="0dp"
+        android:text="1 200 000"
+        android:textColor="#999999"
+        android:textSize="16sp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:layout_alignBaseline="@+id/tvStartDate"
+        android:layout_alignLeft="@id/tvSaleTitle"
+ 		android:layout_marginLeft="14dp"
+        android:textColor="#666666"
+        android:text="Starts:"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tvStartDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:layout_toRightOf="@id/tvNewPrice"
+        android:layout_below="@id/tvSaleTitle"
+        android:layout_marginTop="12dp"
+ 		android:layout_marginLeft="124dp"
+        android:textColor="#666666"
+        android:text="03/22/2014"
+        android:textSize="14sp" />
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:layout_alignBaseline="@+id/tvEndDate"
+        android:layout_alignLeft="@id/tvSaleTitle"
+ 		android:layout_marginLeft="14dp"
+        android:textColor="#cc0000"
+        android:text="Ends:"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tvEndDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:layout_toRightOf="@id/tvNewPrice"
+        android:layout_below="@id/tvStartDate"
+        android:layout_marginTop="2dp"
+ 		android:layout_marginLeft="124dp"
+ 		android:maxLines="1"
+        android:ellipsize="end"
+        android:textColor="#cc0000"
+        android:text="04/12/2014"
+        android:textSize="14sp" />
+    
+    <TextView
+        android:id="@+id/tvLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:layout_toRightOf="@id/tvNewPrice"
+        android:layout_alignLeft="@id/tvSaleTitle"
+ 		android:layout_marginLeft="14dp"
+ 		android:layout_below="@id/tvEndDate"
+ 		android:layout_marginTop="2dp"
+        android:ellipsize="end"
+        android:textColor="#666666"
+        android:text="Where: Gomel, Sviaznoy at Karpovicha"
+        android:textSize="14sp" />
+
+	<org.apmem.tools.layouts.FlowLayout
+	    android:id="@+id/flTags"
+	    android:layout_height="wrap_content"
+	    android:layout_width="match_parent"
+	    f:orientation="horizontal"
+        f:horizontalSpacing="12dp"
+        f:verticalSpacing="6dp"
+        f:debugDraw="false"
+	    android:layout_below="@id/tvLocation"
+	    android:layout_marginTop="10dp"
+	    android:layout_marginLeft="4dp" >
+	    
+	    <TextView 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        style="@style/tagPurple"
+	        android:text="Phone cover"/>
+	    
+	    <TextView 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        style="@style/tagLightGreen"
+	        android:text="Smartphone"/>
+	    
+	    <TextView 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        style="@style/tagLightBlue"
+	        android:text="Nexus"/>
+	    
+	    <TextView 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        style="@style/tagBlack"
+	        android:text="Black style"/>
+	    
+	    <TextView 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        style="@style/tagOrange"
+	        android:text="Accessories"/>
+	</org.apmem.tools.layouts.FlowLayout>
+	
+	<LinearLayout 
+	    android:id="@+id/llButtons"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/flTags"
+	    android:layout_marginTop="4dp"
+	    android:orientation="horizontal">
+	    
+	    <ImageButton 
+	        android:id="@+id/btnPlace"
+	        android:layout_width="0dp"
+	        android:layout_height="36dp"
+	        android:layout_weight="1"
+	        android:background="?android:selectableItemBackground"
+	        android:src="@drawable/ic_action_place"/>
+	    
+	    <ImageButton 
+	        android:id="@+id/btnFav"
+	        android:layout_width="0dp"
+	        android:layout_height="36dp"
+	        android:layout_weight="1"
+	        android:background="?android:selectableItemBackground"
+	        android:src="@drawable/ic_action_not_important"/>
+	    
+	    <ImageButton 
+	        android:id="@+id/btnImages"
+	        android:layout_width="0dp"
+	        android:layout_height="36dp"
+	        android:layout_weight="1"
+	        android:background="?android:selectableItemBackground"
+	        android:src="@drawable/ic_action_camera"/>
+	    
+	    <ImageButton 
+	        android:id="@+id/btnShare"
+	        android:layout_width="0dp"
+	        android:layout_height="36dp"
+	        android:layout_weight="1"
+	        android:background="?android:selectableItemBackground"
+	        android:src="@drawable/ic_action_share" />
+	    
+	    <ImageButton 
+	        android:id="@+id/btnLike"
+	        android:layout_width="0dp"
+	        android:layout_height="36dp"
+	        android:layout_weight="1"
+	        android:background="?android:selectableItemBackground"
+	        android:src="@drawable/ic_action_favourite" />
+	    
+	</LinearLayout>
+
+</RelativeLayout>

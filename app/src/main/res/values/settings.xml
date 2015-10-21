@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="restUrlsNames">
+        <item>home 2</item>
+        <item>home 3</item>
+        <item>home 4</item>
+        <item>work</item>
+    </string-array>
+    
+    <string-array name="restUrlsValues">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    
+    <string-array name="restUrls">
+        <item>http://192.168.1.2:8087/sharesales-back-rest/rest/</item>
+        <item>http://192.168.1.3:8087/sharesales-back-rest/rest/</item>
+        <item>http://192.168.1.4:8087/sharesales-back-rest/rest/</item>
+        <item>http://10.9.202.166:8087/sharesales-back-rest/rest/</item>
+    </string-array>
+</resources>

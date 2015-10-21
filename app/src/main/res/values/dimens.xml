@@ -1,0 +1,13 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+	
+    <dimen name="form_images_block_height">84dp</dimen>
+    
+    <dimen name="view_date_normal">16sp</dimen>
+    <dimen name="view_date_highlighted">18sp</dimen>
+    
+    <dimen name="view_image_height">104dp</dimen>
+</resources>

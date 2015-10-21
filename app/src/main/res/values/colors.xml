@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="action_bar_blue">#5677fc</color>
+    <color name="action_bar_indigo">#3f51b5</color>
+    
+    <!-- <color name="drawer_background">#FFD4C4</color> --><!-- FFF3CF -->
+    <color name="drawer_background">#FFF3CF</color>
+</resources>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <ListPreference
+        android:defaultValue="0"
+        android:entries="@array/restUrlsNames"
+        android:entryValues="@array/restUrlsValues"
+        android:key="restApiBaseUrl"
+        android:title="Rest api base URL" />
+    
+    <Preference 
+        android:key="Sync"
+        android:title="Sync Dictionary"
+        android:summary="Not Synched"/>
+
+</PreferenceScreen>

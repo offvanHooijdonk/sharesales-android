@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?><ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:f="http://schemas.android.com/apk/res/com.share.sales"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:id="@+id/blockCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="?android:selectableItemBackground"
+            android:orientation="horizontal"
+            android:paddingBottom="12dp"
+            android:paddingEnd="8dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingStart="8dp"
+            android:paddingTop="12dp" >
+
+            <TextView
+                android:id="@+id/textCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tapToCategory"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/inputName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/blockCategory"
+            android:hint="Short name"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:id="@+id/blockPrices"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/inputName"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/inputOldPrice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:hint="Old price"
+                android:lines="1"
+                android:inputType="numberDecimal"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/inputCurrentPrice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:hint="New price"
+                android:lines="1"
+                android:inputType="numberDecimal"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/inputPerCent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="%"
+                android:lines="1"
+                android:inputType="number"
+                android:textStyle="bold"
+                android:textSize="18sp" />
+
+            <Spinner
+                android:id="@+id/ddCurrency"
+                android:layout_width="42dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:entries="@array/currs"
+                tools:listitem="@android:layout/simple_spinner_item" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/blockPictures"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/blockPrices"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/btnAddImage"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center_vertical"
+                android:background="?android:selectableItemBackground"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_action_camera" />
+
+            <HorizontalScrollView
+                android:id="@+id/blockPicsScroll"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/form_images_block_height"
+                android:scrollbars="horizontal" >
+
+                <LinearLayout
+                    android:id="@+id/blockPicsList"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/form_images_block_height"
+                    android:orientation="horizontal" >
+                </LinearLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/blockLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/blockPictures" >
+
+            <ImageButton
+                android:id="@+id/btnPickLocation"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="?android:selectableItemBackground"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_action_place" />
+
+            <LinearLayout
+                android:id="@+id/blockPickCity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/btnPickLocation"
+                android:layout_alignEnd="@id/btnPickLocation"
+                android:layout_alignParentLeft="true"
+                android:layout_alignRight="@id/btnPickLocation"
+                android:layout_marginRight="52dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/inputCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="?android:attr/editTextStyle"
+                    android:hint="City here tmp"
+                    android:ellipsize="end"
+                    android:lines="1" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/inputAdress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btnPickLocation"
+                android:hint="Address"
+                android:lines="1" />
+
+            <EditText
+                android:id="@+id/inputStorePlace"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/inputAdress"
+                android:hint="Store Name"
+                android:lines="1" />
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/textLocTmp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/blockLocation"
+            android:hint="tmp"
+            android:lines="6"
+            android:scrollHorizontally="false"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/blockTagsForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textLocTmp" >
+
+            <org.apmem.tools.layouts.FlowLayout
+                android:id="@+id/blockTagsFlow"
+                style="?android:attr/editTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                f:debugDraw="false"
+                f:horizontalSpacing="12dp"
+                f:orientation="horizontal"
+                f:verticalSpacing="6dp" >
+
+                <AutoCompleteTextView
+                    android:id="@+id/inputTagName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:dropDownAnchor="@id/blockTagsFlow"
+                    android:dropDownWidth="match_parent"
+                    android:hint="Tags"
+                    android:imeOptions="actionDone"
+                    android:inputType="text|textCapWords"
+                    android:lines="1"
+                    android:textSize="16sp" />
+            </org.apmem.tools.layouts.FlowLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/blockDates"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/blockTagsForm"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/textStartDate"
+                style="?android:attr/spinnerStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_weight="1"
+                android:hint="Start Date"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textEndDate"
+                style="?android:attr/spinnerStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginStart="12dp"
+                android:layout_weight="1"
+                android:hint="End Date"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</ScrollView>

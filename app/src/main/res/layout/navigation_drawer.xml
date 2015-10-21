@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lvDrawer"
+    android:layout_width="240dp"
+    android:layout_height="match_parent"
+    android:layout_gravity="start"
+    android:background="@color/drawer_background"
+    android:paddingTop="16dp" 
+    android:paddingBottom="8dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="10dp"/>
